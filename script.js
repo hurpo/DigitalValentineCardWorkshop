@@ -15,8 +15,6 @@ messages = [
     "Do you throw exceptions? Because you just caught my heart"
 ]
 
-
-
 no_images = [
     "Images/single1.gif",
     "Images/single2.gif",
@@ -36,8 +34,16 @@ yes_images = [
 message_index = Math.floor(Math.random() * 10)
 image_index = Math.floor(Math.random() * 5)
 
-no_image.src = no_images[image_index]
-yes_image.src = yes_images[image_index]
+if (no_image) {
+    no_image.src = no_images[image_index]
+}
 
-message.innerText = messages[message_index]
+if (yes_image) {
+    yes_image.src = yes_images[image_index]
+}
+
+if (message) {
+    message.innerText = messages[message_index]
+}
+
 
